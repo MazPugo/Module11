@@ -1,0 +1,18 @@
+# blog/app/render_template/homepage.html
+
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for post in all_posts %}
+
+<div>
+   <h2>{{ post.title }}</h2>
+   <p>{{ post.pub_date.strftime('%Y-%m-%d') }}</p>
+   <p>
+       {{ post.body}}
+   </p>
+</div>
+
+{% endfor %}
+{% endblock %}
